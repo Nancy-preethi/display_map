@@ -39,15 +39,15 @@ if submitted:
     path_map = folium.Map(location=[11.00920925,76.9599098], zoom_start=14, width="%100", height="%100")
 
     st.write("**Path Map**")
-    # folium.Marker(location=[42.044, -92.830], popup="start", icon=folium.Icon(color='blue', icon='ok-sign'), ).add_to(
-    #     path_map)
+    folium.Marker(location=[42.044, -92.830], popup="start", icon=folium.Icon(color='blue', icon='ok-sign'), ).add_to(
+        path_map)
     # points = arrow_points_calculate(42.044, -92.830, -92.830)
     folium.PolyLine(locations=[(11.00920925,76.9599098), (11.0270976,76.95202002)], color="purple").add_to(
         path_map)
 
 
-    # folium.Marker(location=[44.044, -92.830], popup="start", icon=folium.Icon(color='blue', icon='ok-sign'), ).add_to(
-    #     path_map)
+    folium.Marker(location=[44.044, -92.830], popup="start", icon=folium.Icon(color='blue', icon='ok-sign'), ).add_to(
+        path_map)
     points = arrow_points_calculate((11.0270976+11.00920925)/2,(76.9599098 + 76.95202002)/2, -11.04)
     folium.PolyLine(locations=points, color="purple").add_to(path_map)
 
